@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABDOU LAZ PHOTOGRAPHY</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- نافذة التسجيل المنبثقة -->
+    <div id="leadModal" class="modal-overlay">
+        <div class="modal-content">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="ABDOU LAZ" class="modal-logo">
+            <h2>مرحباً بكم في ABDOU LAZ</h2>
+            <p>يرجى إدخال معلوماتك للتواصل معك وحجز موعد تصوير الأعراس.</p>
+            
+            <form id="leadForm">
+                <div class="input-group">
+                    <label for="name">الاسم واللقب</label>
+                    <input type="text" id="name" required placeholder="أدخل اسمك الكامل">
+                </div>
+                
+                <div class="input-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" required placeholder="أدخل رقم هاتفك">
+                </div>
+                
+                <div class="input-group">
+                    <label for="wilaya">الولاية</label>
+                    <select id="wilaya" required>
+                        <option value="">اختر الولاية</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="baladiya">البلدية</label>
+                    <select id="baladiya" required>
+                        <option value="">اختر البلدية</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="submitBtn">إرسال الطلب</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- محتوى الموقع الأساسي -->
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="ABDOU LAZ Logo" class="header-logo">
+        <h1>ABDOU LAZ PHOTOGRAPHY</h1>
+        <p>تصوير الأعراس والمناسبات</p>
+    </header>
+
+    <section class="contact-info">
+        <h2>تواصل معنا</h2>
+        <p>📞 رقم الهاتف: 0561384025</p>
+        <p>📱 فيسبوك: ABDOU LAZ PHOTOGRAPHY</p>
+        <p>📷 إنستغرام: ABDOU LAZ PHOTOGRAPHY</p>
+        <p>🎵 تيك توك: ABDOU LAZ PHOTOGRAPHY</p>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
